@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/lv_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按价格从高到低排序"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按热度从高到低排序"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按评价从高到低排序"
+            android:checked="true" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/bt_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="添加新商品" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>
